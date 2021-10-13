@@ -1,0 +1,109 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a,e,f,g,h,j,gotostart;
+    float b,c,d,k;
+    gotostart=2;
+    printf("Makeshift tabletop calculator by your friendly neighborhood Orange.\nFeel free to redistribute.\n");
+    printf("\nIf you want to modify: no rules, go wild. \nJust be aware that programs written in C don't like letters that are not part of the english alphabet.\n");
+        beginning:
+        f=0;
+    printf("\nWhat task would you like me to perform ?\n\n<1>: Add <2>: Substract <3>: Divide <4>: Multiply\n<5>: Percentage increase/decrease <6>: What Percentage is X of Y\n<7>: Roll Modifier calculator\n\nType in one of the numbers to pick the associated task.\n\n");
+    scanf("%d", &a);
+
+    if(a==1)
+    {
+        printf("Give me the number you want to add to.\n");
+        scanf("%f", &c);
+        printf("Give me the number you want to add.\n");
+        scanf("%f", &b);
+        d=c+b;
+        printf("The final number: %.2f", d);
+    }
+
+     if(a==2)
+    {
+        printf("Give me the number you want substract from.\n");
+        scanf("%f", &c);
+        printf("Give me the number you want to substract.\n");
+        scanf("%f", &b);
+        d=c-b;
+        printf("The final number: %.2f", d);
+    }
+    if(a==3)
+    {
+        printf("Give me the number you want to divide.\n");
+        scanf("%f", &c);
+        printf("Give me the number you want to divide by.\n");
+        scanf("%f", &b);
+        d=c/b;
+
+        printf("The final number: %.2f", d);
+    }
+    if(a==4)
+    {
+        printf("Give me the number you want to multiply.\n");
+        scanf("%f", &c);
+        printf("Give me the number you want to multiply with.\n");
+        scanf("%f", &b);
+        d=c*b;
+        printf("The final number: %.2f", d);
+    }
+    if(a==5)
+    {
+        printf("Give me the number you want to increase or decrease by percentage.\n");
+        scanf("%f", &c);
+        printf("Give me the percentage. (Don't type in the symbol).\n");
+        scanf("%f", &b);
+        printf("Increase by or decrease by ?\n <1>: Increase <2>: Decrease\n");
+        scanf("%d", &e);
+        if(e==1)
+        {
+        d=c*(1+ (b/100) );
+        printf ("The increased number is: %.2f", d);
+        }
+        if(e==2)
+        {
+        d=c*(1- (b/100) );
+        printf ("The decreased number is: %.2f", d);
+        }
+        }
+        if(a==6)
+        {
+        printf("Give me the number that is a percentage of something else.\n");
+        scanf("%f", &c);
+        printf("Give me the number which you want to calculate the percentage of.\n");
+        scanf("%f", &b);
+            d=((c/b)*100);
+            printf("%.2f",c);
+            printf(" is %.2f%%",d);
+            printf(" of %.2f\n", b);
+        }
+        if(a==69)
+        {
+            printf("\nNice.");
+        }
+        if(a==7)
+        {
+        printf("Give me your stat\n");
+        scanf("%d", &g);
+        h=10;
+        j=(g-h)/2;
+        k=j-0.5;
+        printf("Your roll bonus is: %.0f", round(k));
+        }
+
+        printf("\n\nType in 1 to quit, or 2 to go back to the beginning.\n");
+        scanf("%d", &f);
+        if(f==1)
+        {
+            return 0;
+        }
+        if(f==gotostart)
+        {
+        goto beginning;
+        }
+}
